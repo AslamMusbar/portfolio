@@ -3,5 +3,6 @@ from portfolio_app import views
 
 urlpatterns = [
     path('',views.index, name="index"),
-    path('contact/',views.contact, name="contact")
+    path('contact/',views.contact, name="contact"),
+    path('gallery/',views.gallery, name="gallery")
 ]
