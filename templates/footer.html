@@ -8,7 +8,7 @@
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="{% static 'assets/images/a_mine/asset.png' %}" alt="Reeni - Personal Portfolio HTML Template for developers and freelancers">
+                                    <img src="{% static 'assets/images/a_mine/asset.png' %}" alt="Aslam Musbar - Personal Portfolio ">
                                 </a>
                             </div>
                             <p class="description"><span>Get Ready</span> To Create Great</p>
@@ -20,19 +20,19 @@
                             <h5 class="ft-title">Quick Link</h5>
                             <ul class="ft-link tmp-link-animation">
                                 <li>
-                                    <a href="about.html">About Me</a>
+                                    <a href="{% url 'about' %}">About Me</a>
                                 </li>
                                 <li>
-                                    <a href="service.html">Service</a>
+                                    <a href="#">Service</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact Me</a>
+                                    <a href="{% url 'contact' %}">Contact Me</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Blog Post</a>
+                                    <a href="{% url 'gallery' %}">Gallery</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Pricing</a>
+                                    <a href="{% url 'project' %}">Projects</a>
                                 </li>
                             </ul>
                         </div>
@@ -46,15 +46,18 @@
                                 <li><span class="ft-icon"><i class="fa-solid fa-phone"></i></span><a href="tel:8220035475">8220035475</a></li>
                             </ul>
                             <div class="social-link footer">
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/asl.ofl/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/aslam-musbar-923ba42b3/"><i class="fa-brands fa-linkedin-in"></i></a>
-
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://github.com/AslamMusbar"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/alaslam.alaslam.779"><i class="fa-brands fa-facebook-f"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+                <div class="footer-bg-img">
+            <img src="{% static 'assets/images/footer/footer-bg-img.png' %}" alt="footer-img">
         </div>
     </footer>
     <div class="copyright-area-one">

@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {%block content %}
+
+
+
+
+    <!-- Breadcrumb Area Start -->
     <div class="breadcrumb-area breadcrumb-bg">
         <div class="container">
             <div class="row">
@@ -8,7 +13,7 @@
                     <div class="breadcrumb-inner text-center">
                         <h1 class="title split-collab">Project</h1>
                         <ul class="page-list">
-                            <li class="tmp-breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="tmp-breadcrumb-item"><a href="https://inversweb.com/">Home</a></li>
                             <li class="icon"><i class="fa-solid fa-angle-right"></i></li>
                             <li class="tmp-breadcrumb-item active">Project</li>
                         </ul>
@@ -17,17 +22,174 @@
             </div>
         </div>
     </div>
-
-    <div class="contact-area-wrapper tmp-section-gap">
+    <!-- Breadcrumb Area End -->
+    <!-- Tpm Our Latest Portfolio  Area Start -->
+    <section class="tmp-latest-portfolio tmp-section-gap">
         <div class="container">
-            <div class="contact-info-wrap">
-                <div class="row">
-                    <h1 style="display:flex;justify-content:center;align-items:center">To Be Updated soon</h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://thaagam.org/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/thaagam.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/thaagam.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                             <a href="https://thaagam.org/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://thaagam.org/">Thaagam Foundation</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Full Website</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://acustomsong.com/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/custom2.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/custom1.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://acustomsong.com/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://acustomsong.com/">A Custom Songs</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Product Forms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://m7corporation.tech/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/m7_2.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/m7_1.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://m7corporation.tech/dashboard/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://m7corporation.tech/">M7 Corporation Website & Dashboard</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Dashboard & Graph</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="project-details.html">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/gcc_f.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/gcc_1.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="project-details.html" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="project-details.html">GCC Government - Shelters</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Salary & Food Register Forms </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://quickpay.srisankarapuram.com/dashboard/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/san1.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/san2.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://quickpay.srisankarapuram.com/dashboard/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://quickpay.srisankarapuram.com/dashboard/">Sankarapuram Dashboard</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Admin Portal , Mpay portal </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://m7.digital/dashboard/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/m7d1.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/m7d2.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://m7.digital/dashboard/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://m7.digital/">M7 Digital Dashboard</a>
+                                </h3>
+                                <p class="portfoli-card-para"> Dashboard , Add-Service , Service Requested , Contact Data </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://m7-studios.com/dashboard/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/m7s2.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/m7s1.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://m7-studios.com/dashboard/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://m7-studios.com/">M7 Studios Dashboard</a>
+                                </h3>
+                                <p class="portfoli-card-para">  CRUD for all products </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="latest-portfolio-card v5 tmp-hover-link">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v2">
+                                <a href="https://portfolio-weo3.onrender.com/">
+                                    <img class="img-primary hidden-on-mobile" src="{% static 'assets/images/a_project/img.png' %}" alt="Blog Thumbnail">
+                                    <img class="img-secondary" src="{% static 'assets/images/a_project/pf1.png' %}" alt="BLog Thumbnail">
+                                </a>
+                            </div>
+                            <a href="https://portfolio-weo3.onrender.com/" class="img-link-icon"><i class="fa-solid fa-arrow-up-long"></i></a>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a class="link" href="https://portfolio-weo3.onrender.com/">Personal Portfolio</a>
+                                </h3>
+                                <p class="portfoli-card-para">  personal portfolio For MySelf - Fully Responsive</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+    </section>
 
-
-    </div>
 {% endblock %}

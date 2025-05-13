@@ -12,3 +12,5 @@ def gallery(request):
     return render(request,"gallery.html")
 def project(request):
     return render(request,"project.html")
+def about(request):
+    return render(request,"about.html")
