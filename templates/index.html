@@ -60,7 +60,7 @@
                         <div class="service-card-icon">
                             <i class="fa-light fa-pen-ruler"></i>
                         </div>
-                        <h4 class="service-title"><a href="service-details.html">Web Design</a></h4>
+                        <h4 class="service-title"><a href="#">Web Design</a></h4>
                         <p class="service-para">10 Projects</p>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="service-card-icon">
                             <i class="fa-light fa-bezier-curve"></i>
                         </div>
-                        <h4 class="service-title"><a href="service-details.html">Web Development</a></h4>
+                        <h4 class="service-title"><a href="#">Web Development</a></h4>
                         <p class="service-para">10 Projects</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="service-card-icon">
                             <i class="fa-light fa-lightbulb"></i>
                         </div>
-                        <h4 class="service-title"><a href="service-details.html">Web Research</a></h4>
+                        <h4 class="service-title"><a href="#">Web Research</a></h4>
                         <p class="service-para">10 Projects</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <div class="service-card-icon">
                             <i class="fa-light fa-envelope"></i>
                         </div>
-                        <h4 class="service-title"><a href="service-details.html">backend Flow</a></h4>
+                        <h4 class="service-title"><a href="#">backend Flow</a></h4>
                         <p class="service-para">5 Projects</p>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             </h2>
                             <h3 class="year-title">Projects  <br> Completed</h3>
                         </div>
-                        <p class="year-para">Delivered impactful projects including an e-commerce website, recommendation engine using KMeans & CLIP, and multiple full-stack features with Flask, HTML, CSS, and MySQL. Focused on performance, security, and user experience.</p>
+                        <p class="year-para">Delivered impactful projects including an e-commerce website, recommendation engine using KMeans & CLIP, and multiple full-stack features with Django, HTML, CSS, and MySQL. Focused on performance, security, and user experience.</p>
                     </div>
                 </div>
 <!--                <div class="col-12 col-lg-6 col-xl-6 col-xxl-6">-->
@@ -443,7 +443,27 @@
 
 
 
-
+<div id="Donations" class="aslam tab-pane">
+  {% if messages %}
+  <div class="col-sm-12">
+    {% for message in messages %}
+    {% if message.tags == 'error' %}
+    <div
+      class="alert  alert-simple alert-danger alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show"
+      role="alert" data-brk-library="component_alert">
+      <strong class="text-center font__weight-semibold"></strong> {{ message }}
+    </div>
+    {% else %}
+    <div
+      class="alert alert-simple alert-success alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show"
+      role="alert" data-brk-library="component_alert">
+      <strong class="text-center font__weight-semibold"></strong> {{ message }}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
     <!-- Tpm Get In touch start -->
     <section class="get-in-touch-area tmp-section-gapTop">
         <div class="container conlast">
@@ -464,7 +484,7 @@
                             <div class="contact-inner">
                                 <div class="contact-form">
                                     <div id="form-messages" class="error"></div>
-                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="https://inversweb.com/product/html/reeni/mailer.php">
+                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="/submit-contact/">
                                         <div class="contact-form-wrapper row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
