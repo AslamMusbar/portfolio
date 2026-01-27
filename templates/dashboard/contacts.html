@@ -1,0 +1,48 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Contacts - Dashboard{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Contact Submissions</h1>
+    <span class="badge badge-success">{{ contacts|length }} Total</span>
+</div>
+
+<div class="content">
+    {% if contacts %}
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Submitted At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ contact.name }}</td>
+                    <td><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></td>
+                    <td><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a></td>
+                    <td>{{ contact.subject|default:"-" }}</td>
+                    <td>{{ contact.message|truncatewords:10 }}</td>
+                    <td>{{ contact.submitted_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>No contacts yet</h3>
+        <p>Contact submissions will appear here.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Overview - Dashboard{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Dashboard Overview</h1>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>{{ total_contacts }}</h3>
+        <p>Total Contacts</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ today_contacts }}</h3>
+        <p>Today's Contacts</p>
+    </div>
+</div>
+
+<div class="content">
+    <h2 style="margin-bottom: 15px; color: #333;">Recent Contacts</h2>
+    {% if recent_contacts %}
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Submitted At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in recent_contacts %}
+                <tr>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.subject|default:"-" }}</td>
+                    <td>{{ contact.submitted_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <p style="margin-top: 15px;"><a href="{% url 'dash_contacts' %}" class="back-link">View all contacts &rarr;</a></p>
+    {% else %}
+    <div class="empty-state">
+        <h3>No contacts yet</h3>
+        <p>Contact submissions will appear here.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
