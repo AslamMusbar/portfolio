@@ -78,8 +78,9 @@
                         <div class="col-lg-7">
                             <div class="contact-inner">
                                 <div class="contact-form">
-                                    <div id="form-messages" class="error"></div>
-                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="https://inversweb.com/product/html/reeni/mailer.php">
+                                    <div id="form-messages"></div>
+                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="{% url 'submit-contact' %}">
+                                        {% csrf_token %}
                                         <div class="contact-form-wrapper row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
@@ -89,7 +90,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input class="input-field" id="contact-phone" placeholder="Phone Number" type="number" required>
+                                                    <input class="input-field" id="contact-phone" name="phone" placeholder="Phone Number" type="text" required>
                                                 </div>
                                             </div>
 

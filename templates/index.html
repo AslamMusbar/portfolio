@@ -367,7 +367,7 @@
 
                             <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
                                 <p class="ex-subtitle">experience</p>
-                                <h2 class="ex-name"><a href="https://thaagam.org/">Thaagam Foundation (1 Year)</a></h2>
+                                <h2 class="ex-name"><a href="https://thaagam.org/">Thaagam Foundation (1+ Year)</a></h2>
                                 <h3 class="ex-title">Full Stack Developer</h3>
                                 <p class="ex-para">Contributed to the end-to-end development of donation platforms, volunteer systems, and campaign pages. Implemented features such as cause recommendations, dynamic content rendering, and secure form handling using Django, Python, HTML, CSS, and JavaScript. Focused on improving user experience and backend efficiency to support real-time donation tracking and campaign management.</p>
                             </div>
@@ -443,27 +443,6 @@
 
 
 
-<div id="Donations" class="aslam tab-pane">
-  {% if messages %}
-  <div class="col-sm-12">
-    {% for message in messages %}
-    {% if message.tags == 'error' %}
-    <div
-      class="alert  alert-simple alert-danger alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show"
-      role="alert" data-brk-library="component_alert">
-      <strong class="text-center font__weight-semibold"></strong> {{ message }}
-    </div>
-    {% else %}
-    <div
-      class="alert alert-simple alert-success alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show"
-      role="alert" data-brk-library="component_alert">
-      <strong class="text-center font__weight-semibold"></strong> {{ message }}
-    </div>
-    {% endif %}
-    {% endfor %}
-  </div>
-  {% endif %}
-</div>
     <!-- Tpm Get In touch start -->
     <section class="get-in-touch-area tmp-section-gapTop">
         <div class="container conlast">
@@ -483,8 +462,9 @@
                         <div class="col-lg-7">
                             <div class="contact-inner">
                                 <div class="contact-form">
-                                    <div id="form-messages" class="error"></div>
-                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="/submit-contact/">
+                                    <div id="form-messages"></div>
+                                    <form class="tmp-dynamic-form" id="contact-form" method="POST" action="{% url 'submit-contact' %}">
+                                        {% csrf_token %}
                                         <div class="contact-form-wrapper row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
@@ -494,7 +474,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input class="input-field" id="contact-phone" placeholder="Phone Number" type="number" required>
+                                                    <input class="input-field" id="contact-phone" name="phone" placeholder="Phone Number" type="text" required>
                                                 </div>
                                             </div>
 
@@ -520,7 +500,7 @@
                                                 <div class="tmp-button-here">
                                                     <button class="tmp-btn hover-icon-reverse radius-round w-100" name="submit" type="submit" id="submit">
                                                         <span class="icon-reverse-wrapper">
-                                        <span class="btn-text">Appointment Now</span>
+                                        <span class="btn-text">Let's Talk</span>
                                                         <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
                                                         <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
                                                         </span>

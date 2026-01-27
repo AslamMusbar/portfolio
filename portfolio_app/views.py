@@ -1,25 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import Contact
 
 
 # Create your views here.
 
 def index(request):
-    return render(request,"index.html")
+    return render(request, "index.html")
+
 def contact(request):
-    return render(request,"contact.html")
+    return render(request, "contact.html")
 
 def gallery(request):
-    return render(request,"gallery.html")
+    return render(request, "gallery.html")
+
 def project(request):
-    return render(request,"project.html")
+    return render(request, "project.html")
+
 def about(request):
-    return render(request,"about.html")
+    return render(request, "about.html")
 
-
-from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render
-from django.http import JsonResponse, HttpResponse
-from .models import Contact
 
 @csrf_exempt
 def contact_submit(request):
@@ -28,11 +29,11 @@ def contact_submit(request):
         phone = request.POST.get("phone")
         email = request.POST.get("email")
         subject = request.POST.get("subject")
-        message = request.POST.get("message")
+        message_text = request.POST.get("message")
 
-        # Basic validation (optional)
-        if not all([name, phone, email, message]):
-            return JsonResponse({"status": "error", "message": "Please fill all required fields."}, status=400)
+        # Basic validation
+        if not all([name, phone, email, message_text]):
+            return HttpResponse("Please fill all required fields.", status=400)
 
         # Save to model
         Contact.objects.create(
@@ -40,8 +41,9 @@ def contact_submit(request):
             phone=phone,
             email=email,
             subject=subject,
-            message=message
+            message=message_text
         )
 
-        return JsonResponse({"status": "success", "message": "Thank you! We'll get in touch soon."})
-    return HttpResponse("Method not allowed", status=405)
+        return HttpResponse("Thank you! We'll get in touch soon.")
+
+    return HttpResponse("Invalid request method.", status=405)
