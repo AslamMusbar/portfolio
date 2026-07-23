@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from portfolio_app import views as seo_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('robots.txt', seo_views.robots, name='robots'),
+    path('sitemap.xml', seo_views.sitemap, name='sitemap'),
     path('', include('portfolio_app.urls')),
     path('dashboard/', include('dashboard.urls'))
 ]

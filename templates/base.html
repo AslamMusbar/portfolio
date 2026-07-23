@@ -5,9 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reeni is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.">
+
+    <!-- Primary SEO meta -->
+    <title>{% block title %}Aslam Musbar M — Software Engineer & Full Stack Developer | Portfolio{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Aslam Musbar M is a Software Engineer and Full Stack Developer in Chennai, India, specializing in Python, Django, React, and MySQL. Explore projects, experience, and get in touch.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}Aslam Musbar M, Aslam Musbar, Aslam Musbar Chennai, Aslam Musbar developer, Software Engineer, Full Stack Developer, Python Developer, Django Developer, React Developer, portfolio{% endblock %}">
+    <meta name="author" content="Aslam Musbar M">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="{{ request.build_absolute_uri|default:'https://aslam.alwaysdata.net/' }}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/a_mine/logo-aslam.webp' %}">
-    <title>Aslam Musbar's portfolio |  Personal Portfolio For Myself</title>
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="Aslam Musbar M — Portfolio">
+    <meta property="og:title" content="{% block og_title %}Aslam Musbar M — Software Engineer & Full Stack Developer{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Software Engineer & Full Stack Developer in Chennai, India — Python, Django, React, and MySQL. Explore my projects and experience.{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri|default:'https://aslam.alwaysdata.net/' }}">
+    <meta property="og:image" content="{{ request.scheme|default:'https' }}://{{ request.get_host|default:'aslam.alwaysdata.net' }}{% static 'assets/images/a_mine/aslam.png' %}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Aslam Musbar M — Software Engineer & Full Stack Developer{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Software Engineer & Full Stack Developer in Chennai, India — Python, Django, React, and MySQL.{% endblock %}">
+    <meta name="twitter:image" content="{{ request.scheme|default:'https' }}://{{ request.get_host|default:'aslam.alwaysdata.net' }}{% static 'assets/images/a_mine/aslam.png' %}">
+
+    <!-- Add your Google Search Console verification code here after registering the site: -->
+    {% block google_site_verification %}{% endblock %}
+
+    <!-- Structured data: Person (helps Google rank this site for "Aslam Musbar M") -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aslam Musbar",
+      "alternateName": ["Aslam Musbar M", "Aslam Musbar M."],
+      "url": "https://aslam.alwaysdata.net/",
+      "image": "https://aslam.alwaysdata.net{% static 'assets/images/a_mine/aslam.png' %}",
+      "jobTitle": "Software Engineer / Full Stack Developer",
+      "description": "Software Engineer and Full Stack Developer specializing in Python, Django, React, and MySQL, building scalable and impactful web applications.",
+      "email": "mailto:alaslam381@gmail.com",
+      "telephone": "+91-8220035475",
+      "gender": "Male",
+      "nationality": "Indian",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13/8, Jinna Street, Alandur",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600016",
+        "addressCountry": "IN"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "M7 Corporation",
+        "url": "https://m7corporation.tech/"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "M.Sc & B.Sc in Computer Science"
+      },
+      "knowsAbout": ["Python", "Django", "React", "JavaScript", "MySQL", "MongoDB", "Full Stack Web Development", "HTML", "CSS"],
+      "sameAs": [
+        "https://www.linkedin.com/in/aslam-musbar-923ba42b3/",
+        "https://github.com/Aslam-Thaagam",
+        "https://www.instagram.com/asl.ofl/",
+        "https://www.facebook.com/alaslam.alaslam.779"
+      ]
+    }
+    </script>
+
+    <!-- Structured data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Aslam Musbar M — Portfolio",
+      "url": "https://aslam.alwaysdata.net/",
+      "author": { "@type": "Person", "name": "Aslam Musbar" }
+    }
+    </script>
     <!-- Bootstrap min css -->
     <link rel="stylesheet" href="{% static 'assets/css/vendor/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper.css' %}">
