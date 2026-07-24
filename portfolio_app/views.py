@@ -24,6 +24,12 @@ def project(request):
 def about(request):
     return render(request, "about.html")
 
+def terms(request):
+    return render(request, "terms.html")
+
+def privacy(request):
+    return render(request, "privacy.html")
+
 
 @csrf_exempt
 def contact_submit(request):
@@ -94,6 +100,8 @@ def sitemap(request):
         {"name": "project", "priority": "0.8", "changefreq": "monthly"},
         {"name": "gallery", "priority": "0.6", "changefreq": "monthly"},
         {"name": "contact", "priority": "0.7", "changefreq": "yearly"},
+        {"name": "terms", "priority": "0.3", "changefreq": "yearly"},
+        {"name": "privacy", "priority": "0.3", "changefreq": "yearly"},
     ]
     urls = [
         {"loc": base + reverse(p["name"]), "priority": p["priority"], "changefreq": p["changefreq"]}

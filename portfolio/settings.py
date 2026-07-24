@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# Public base URL of the live site (used for SEO: sitemap.xml, robots.txt, canonical URLs)
+SITE_URL = 'https://aslam.alwaysdata.net'
+
 
 # Application definition
 

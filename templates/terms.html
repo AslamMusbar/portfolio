@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Terms & Conditions — Aslam Musbar M{% endblock %}
+{% block meta_description %}Terms & Conditions for using the portfolio website of Aslam Musbar M, Software Engineer and Full Stack Developer based in Chennai, India.{% endblock %}
+{% block content %}
+
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb-area breadcrumb-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner text-center">
+                        <h1 class="title split-collab">Terms &amp; Conditions</h1>
+                        <ul class="page-list">
+                            <li class="tmp-breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="icon"><i class="fa-solid fa-angle-right"></i></li>
+                            <li class="tmp-breadcrumb-item active">Terms &amp; Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End -->
+
+    <!-- Legal Content Area Start -->
+    <section class="tmp-section-gap">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="legal-content">
+                        <p class="disc"><strong>Last updated:</strong> 24 July 2026</p>
+
+                        <p class="disc">Welcome to the portfolio website of Aslam Musbar M ("I", "me", or "my"). By accessing or using this website (<a href="https://aslam.alwaysdata.net/">aslam.alwaysdata.net</a>), you agree to be bound by these Terms &amp; Conditions. If you do not agree with any part of these terms, please do not use this website.</p>
+
+                        <h3 class="mt--40 mb--20">1. Use of the Website</h3>
+                        <p class="disc">This website is provided for informational purposes to showcase my professional work, skills, and experience as a Software Engineer and Full Stack Developer. You may browse the content for personal, non-commercial use. You agree not to misuse the website, attempt to gain unauthorised access, or interfere with its normal operation.</p>
+
+                        <h3 class="mt--40 mb--20">2. Intellectual Property</h3>
+                        <p class="disc">All content on this website — including text, graphics, logos, images, project descriptions, and design — is owned by or licensed to Aslam Musbar M and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or reuse any content without prior written permission, except where explicitly stated.</p>
+
+                        <h3 class="mt--40 mb--20">3. Third-Party Links</h3>
+                        <p class="disc">This website may contain links to third-party websites and projects (such as client work or organisations I have worked with). These links are provided for convenience only. I am not responsible for the content, privacy practices, or availability of any external websites.</p>
+
+                        <h3 class="mt--40 mb--20">4. Contact Form</h3>
+                        <p class="disc">When you submit the contact form, you agree to provide accurate information. The details you share are used solely to respond to your enquiry, as described in my <a href="{% url 'privacy' %}">Privacy Policy</a>. Please do not submit unlawful, offensive, or spam content.</p>
+
+                        <h3 class="mt--40 mb--20">5. No Warranty</h3>
+                        <p class="disc">This website and its content are provided "as is" without warranties of any kind, either express or implied. While I strive to keep the information accurate and up to date, I make no guarantees regarding completeness, reliability, or availability at all times.</p>
+
+                        <h3 class="mt--40 mb--20">6. Limitation of Liability</h3>
+                        <p class="disc">I shall not be liable for any direct, indirect, or consequential loss or damage arising from your use of, or inability to use, this website.</p>
+
+                        <h3 class="mt--40 mb--20">7. Changes to These Terms</h3>
+                        <p class="disc">I may update these Terms &amp; Conditions from time to time. Any changes will be posted on this page with an updated revision date. Continued use of the website after changes constitutes acceptance of the revised terms.</p>
+
+                        <h3 class="mt--40 mb--20">8. Contact</h3>
+                        <p class="disc">If you have any questions about these Terms &amp; Conditions, please reach out via the <a href="{% url 'contact' %}">contact page</a> or email <a href="mailto:alaslam381@gmail.com">alaslam381@gmail.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Legal Content Area End -->
+
+{% endblock %}
